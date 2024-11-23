@@ -123,10 +123,7 @@ This is a typical Maven directory structure for a Spring-based web application:
 │   ├── /service                  # Business logic and services
 │   └── /dao                      # Data Access Object layer for database interaction
 │
-├── /src/main/resources           # Resources like properties files and static files
-│   ├── application.properties    # Database and application configurations
-│   └── /static                   # Static assets like CSS, JS, and images
-│
+
 ├── /src/main/webapp              # Web resources (JSP files, WEB-INF configurations)
 │   ├── /WEB-INF                  # Spring and web-related configurations
 │   └── /jsp                      # JSP files for rendering views
@@ -135,10 +132,8 @@ This is a typical Maven directory structure for a Spring-based web application:
 │   └── /com/romeo                # Tests for the application
 │
 ├── /pom.xml                      # Maven build configuration
-└── /README.md                    # Project documentation (this file)
-```
 
----
+
 
 ## Testing
 
