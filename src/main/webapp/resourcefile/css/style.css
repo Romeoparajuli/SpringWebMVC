@@ -1,0 +1,179 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e8f5f0, #f5fefb);
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    min-height: 100vh;     /* Make the body at least the height of the viewport */
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to right, rgb(5, 150, 105), rgb(6, 95, 70)); /* Ensure a visible gradient */
+    color: white; /* Keep text and links white for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for better separation */
+    position: relative;
+    overflow: hidden; /* Prevent elements from overflowing the header */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo-img {
+    height: 120px; /* Adjust the logo size */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px;
+    /* REMOVE blend mode if causing issues */
+    /* mix-blend-mode: screen; */
+    background-color: transparent; /* Ensure no background */
+    border-radius: 8px; /* Optional: soften edges */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+/* Navigation Links */
+.header .nav {
+    margin-left: auto; /* Keeps the navigation aligned right but allows adjustments */
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    margin: 0 8px; /* Adjust spacing between links */
+    color: white; /* Keeps the link color visible */
+    font-size: 1.2rem;
+    transition: opacity 0.3s, transform 0.2s ease;
+    padding-left: 40px; /* Bring the link slightly left */
+}
+
+.header .nav a:first-child {
+    margin-left: -40px; /* Adjust to shift the first link to the left */
+}
+
+.header .nav a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);}
+
+.company-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+    color: #fff; /* Matches header text color */
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #f0c929; /* A contrasting golden-yellow for attention */
+    display: block;
+    margin-top: 4px; /* Spacing below the company name */
+    font-style: italic;
+}
+
+
+/* Main Section */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: rgb(5, 150, 105);
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box {
+    padding: 15px 20px;
+    width: 60%;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 128, 90, 0.5);
+    font-size: 1.2rem;
+}
+
+.search-button {
+    padding: 15px 20px;
+    background: linear-gradient(to right, rgb(5, 150, 105), rgb(6, 95, 70));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease;
+}
+
+.search-button:hover {
+    background: linear-gradient(to right, rgb(6, 95, 70), rgb(5, 150, 105));
+    transform: translateY(-2px);
+}
+
+/* Footer Section */
+/* Ensure Footer Sticks to Bottom */
+.footer {
+    margin-top: auto; /* Push footer to the bottom */
+    text-align: center;
+    background-color: rgb(5, 150, 105);
+    color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #f0c929;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .nav {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+}
+
+.title i {
+    color: rgb(5, 150, 105);
+    margin-right: 10px;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
